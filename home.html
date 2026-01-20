@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charmaine Photography Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin: 60px 0;
+            scroll-margin-top: 80px;
+        }
+
+        .artist-statement {
+            background-color: white;
+            padding: 40px;
+            border-left: 5px solid #333;
+            margin-bottom: 60px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .artist-statement h2 {
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .artist-statement p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .genre-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #1a1a1a;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 15px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .photo-card {
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .photo-placeholder {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            width: 100%;
+            padding-top: 75%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .photo-placeholder.portrait {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .photo-placeholder.lifestyle {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .photo-placeholder.product {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .photo-placeholder.venue {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+
+        .photo-info {
+            padding: 25px;
+        }
+
+        .photo-info h3 {
+            font-size: 1.5em;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+
+        .photo-info p {
+            font-size: 0.95em;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .photo-number {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #1a1a1a;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Charmaine Photography Portfolio</h1>
+        <p>Capturing stories through the lens</p>
+    </header>
+
+    <nav>
+        <a href="#artist-statement">Artist Statement</a>
+        <a href="#portraits">Portraits</a>
+        <a href="#lifestyle">Lifestyle</a>
+        <a href="#product">Product</a>
+        <a href="#venues">Venues</a>
+    </nav>
+
+    <div class="container">
+        <!-- ARTIST STATEMENT -->
+        <section class="artist-statement" id="artist-statement">
+            <h2>Artist Statement</h2>
+            <p>
+                Photography, for me, is a meditation on presence. Each frame is an invitation to pause and witness the extraordinary hiding within the ordinary. I seek the interplay of shadow and light, the quiet stories etched in weathered faces, and the fleeting poetry of urban landscapes at twilight.
+            </p>
+            <p>
+                My work spans street photography, intimate portraits, and architectural studies—each genre offering a different lens through which to explore human experience and our relationship with the spaces we inhabit.
+            </p>
+        </section>
+
+        <!-- PORTRAITS SECTION -->
+        <section class="genre-section" id="portraits">
+            <h2>Portraits</h2>
+            <div class="gallery">
+                <!-- Portrait 1 -->
+                <div class="photo-card">
+                    <img src="portrait.jpg" alt="Portrait 1" style="width: 100%; height: auto; display: block;">
+                    <div class="photo-info">
+                        <span class="photo-number">Portrait 1 of 2</span>
+                        <h3>Portrait</h3>
+                        <p>
+                            <strong>Story & Rationale:</strong>This portrait captures a young woman seated casually on a staircase in a bright, modern interior, portraying a relaxed yet confident moment. The subject was photographed in a natural, unstaged pose to reflect her genuine personality and sense of ease rather than a formal or posed appearance. The clean architectural lines of the space were used to frame the subject simply, while soft natural light from the surrounding windows provides even illumination and a calm, airy atmosphere. The low camera angle adds subtle presence and strength to the composition, and overall, the image aims to convey a sense of quiet confidence, authenticity, and individuality.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Portrait 2 -->
+                <div class="photo-card">
+                    <img src="portrait2.JPG" alt="Portrait 2" style="width: 100%; height: auto; display: block;">
+                    <div class="photo-info">
+                        <span class="photo-number">Portrait 2 of 2</span>
+                        <h3>Portrait</h3>
+                        <p>
+                            <strong>Story & Rationale:</strong> This outdoor portrait was taken in a quiet campus setting, using natural daylight to create a fresh and relaxed mood. The subject is positioned along a railing to use leading lines that guide the viewer’s eye toward her, while the greenery in the background adds a soft, natural contrast to her outfit. The casual pose and gentle movement in her hair help convey a sense of ease and spontaneity, capturing her in a simple, authentic moment.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIFESTYLE SECTION -->
+        <section class="genre-section" id="lifestyle">
+            <h2>Lifestyle</h2>
+            <div class="gallery">
+                <!-- Lifestyle 1 -->
+                <div class="photo-card">
+                    <img src="lifestyle.JPG" alt="Lifestyle" style="width: 100%; height: auto; display: block;">
+                    <div class="photo-info">
+                        <span class="photo-number">Lifestyle 1 of 1</span>
+                        <h3>Lifestyle</h3>
+                        <p>
+                            <strong>Story & Rationale:</strong> This photograph captures a simple, intimate moment of holding a camera, symbolising the start of a creative process and the joy of documenting everyday life. The minimal composition and soft background keep the focus on the subject, conveying a calm, reflective mood and a quiet connection between the photographer and the act of capturing memories.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCT SECTION -->
+        <section class="genre-section" id="product">
+            <h2>Product</h2>
+            <div class="gallery">
+                <!-- Product 1 -->
+                <div class="photo-card">
+                    <img src="product.jpg" alt="Product" style="width: 100%; height: auto; display: block;">
+                    <div class="photo-info">
+                        <span class="photo-number">Product 1 of 1</span>
+                        <h3>Product</h3>
+                        <p>
+                            <strong>Story & Rationale:</strong> This product photograph presents a compact camera in a clean, minimal setting, using a low angle and shallow depth of field to draw attention to its form and details. The soft background blur helps isolate the subject, creating a calm and focused composition that highlights the camera as both a functional tool and a symbol of everyday creativity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VENUES SECTION -->
+        <section class="genre-section" id="venues">
+            <h2>Venues</h2>
+            <div class="gallery">
+                <!-- Venue 1 -->
+                <div class="photo-card">
+                    <img src="venue1.jpg" alt="Venue 1" style="width: 100%; height: auto; display: block;">
+                    <div class="photo-info">
+                        <span class="photo-number">Venue 1 of 2</span>
+                        <h3>Venue</h3>
+                        <p>
+                            <strong>Story & Rationale:</strong> This image captures a quiet moment in a modern campus environment, showcasing the balance between architecture and greenery. The composition uses clean lines and open space to convey a calm, orderly atmosphere, reflecting a peaceful and welcoming environment for learning and everyday life.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Venue 2 -->
+                <div class="photo-card">
+                    <img src="venue2.jpg" alt="Venue 2" style="width: 100%; height: auto; display: block;">
+                    <div class="photo-info">
+                        <span class="photo-number">Venue 2 of 2</span>
+                        <h3>Venue</h3>
+                        <p>
+                            <strong>Story & Rationale:</strong>This photograph documents the interior of a library space, focusing on the structured rows of bookshelves and self-service kiosks. The symmetrical layout and repeating patterns emphasize order and accessibility, conveying a sense of organization, knowledge, and the quiet rhythm of an academic environment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Charmaine Photography Portfolio</p>
+        <p>All photographs are original works</p>
+    </footer>
+</body>
+</html>
+https://chatgpt.com/g/g-p-695f800c93e88191bc4fa89ab8318100-c240-fa/project
